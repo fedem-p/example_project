@@ -1,6 +1,6 @@
 import sys
 
-sys.path.insert(0, "/home/fpuppo/workspace/example_project/core")
+sys.path.insert(0, "./core")
 
 from my_project import my_sum
 import pytest
@@ -15,7 +15,7 @@ def my_fixture():
 
 
 @pytest.mark.parametrize(
-    "a,b, expected_output", [(3, 4, "9"), (0, 0, 3), (3, 4, 7), (0, 0, 0)]
+    "a,b, expected_output", [(3, 4, 7), (0, 0, 0)]
 )
 def test_my_sum(a, b, expected_output):
     assert my_sum(a, b) == expected_output
